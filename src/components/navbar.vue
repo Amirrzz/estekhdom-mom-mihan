@@ -13,8 +13,9 @@ nav {
   display: flex;
   justify-content: center;
   gap: 4%;
-  position: sticky;
+  position: absolute;
   top: 85px;
+  width: 100%;
   left: 0;
 }
 a {

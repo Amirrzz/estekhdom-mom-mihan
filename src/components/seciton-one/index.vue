@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import Slider from "@/components/secion-one/slider.vue";
+import Slider from "@/components/seciton-one/slider.vue";
 </script>
 
 <style scoped>
