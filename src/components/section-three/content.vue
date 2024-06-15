@@ -30,7 +30,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-  padding: 100px 0;
+  padding: 0 100px;
   font-weight: bold;
   align-items: center;
 }
