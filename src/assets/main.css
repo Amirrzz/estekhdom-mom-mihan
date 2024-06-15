@@ -8,3 +8,9 @@
   align-items: center;
   background-attachment: fixed;
 }
+a {
+  text-decoration: none;
+  line-height: 26px;
+  color: white;
+  font-weight: 500;
+}

@@ -11,7 +11,9 @@
         </div>
       </div>
       <v-row class="justify-center prices">
-        <v-col cols="12" sm="4"><PriceCard plan="starter" /></v-col>
+        <v-col cols="12" sm="4">
+          <PriceCard plan="starter" />
+        </v-col>
         <v-col cols="12" sm="4"
           ><PriceCard plan="professional" :recommended="true"
         /></v-col>

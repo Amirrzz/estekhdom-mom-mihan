@@ -7,6 +7,7 @@
       <SectionThree />
       <SectionFour />
     </v-main>
+    <Footer></Footer>
   </v-app>
 </template>
 
@@ -16,5 +17,6 @@ import SectionOne from "@/components/seciton-one/index.vue";
 import SectionTwo from "@/components/section-two/index.vue";
 import SectionThree from "@/components/section-three/index.vue";
 import SectionFour from "@/components/section-four/index.vue";
+import Footer from "@/components/AppFooter.vue";
 //
 </script>
