@@ -1,6 +1,6 @@
 <template>
   <div class="price-card">
-    <div class="price-card_header">{{ header }}</div>
+    <div class="price-card_header">{{ plan }}</div>
     <div class="price-card_price">{{ price }}<sup>$</sup></div>
     <div class="price-card_option-item">
       <span class="price-card_option-item_icon-container"
@@ -8,7 +8,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(0)"
+          v-if="getActiveOptions.includes(0)"
         />
       </span>
       <span>2 GB of space</span>
@@ -20,7 +20,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(1)"
+          v-if="getActiveOptions.includes(1)"
         />
       </span>
       <span>14 days of backups</span>
@@ -32,7 +32,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(2)"
+          v-if="getActiveOptions.includes(2)"
         />
       </span>
       <span>Social integrations</span>
@@ -44,7 +44,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(3)"
+          v-if="getActiveOptions.includes(3)"
         />
       </span>
       <span>Client billing</span>
@@ -56,7 +56,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(4)"
+          v-if="getActiveOptions.includes(4)"
         />
       </span>
       <span>Remote access</span>
@@ -68,7 +68,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(5)"
+          v-if="getActiveOptions.includes(5)"
         />
       </span>
       <span>Custom domain</span>
@@ -80,7 +80,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(6)"
+          v-if="getActiveOptions.includes(6)"
         />
       </span>
       <span>24 hours support</span>
@@ -92,7 +92,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(7)"
+          v-if="getActiveOptions.includes(7)"
         />
       </span>
       <span>Admin tools</span>
@@ -103,7 +103,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(8)"
+          v-if="getActiveOptions.includes(8)"
         />
       </span>
       <span>Collaboration tools</span>
@@ -114,7 +114,7 @@
           icon="fa-check"
           color="green"
           size="x-small"
-          v-if="activeOptions.includes(9)"
+          v-if="getActiveOptions.includes(9)"
         />
       </span>
       <span>User management</span>
@@ -132,11 +132,11 @@
   </div>
 </template>
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, computed } from "vue";
 const props = defineProps({
-  header: {
+  plan: {
     type: String,
-    default: "Starter",
+    default: "starter",
   },
   price: {
     type: String,
@@ -146,10 +146,19 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  activeOptions: {
-    type: Array,
-    default: () => [0, 1, 2, 3, 4],
-  },
+});
+
+const getActiveOptions = computed(() => {
+  switch (props.plan) {
+    case "starter":
+      return [0, 1, 2, 3];
+    case "professional":
+      return [0, 1, 2, 3, 4, 5, 6];
+    case "team":
+      return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    default:
+      break;
+  }
 });
 </script>
 <style scoped>
@@ -161,6 +170,7 @@ const props = defineProps({
 .price-card_header {
   font-size: 22px;
   padding-left: 18px;
+  text-transform: capitalize;
 }
 .price-card_price {
   font-size: 58px;
