@@ -2,7 +2,7 @@
   <v-app>
     <Navbar></Navbar>
     <v-main>
-      <HelloWorld />
+      <SectionOne />
     </v-main>
 
     <AppFooter />
@@ -11,5 +11,6 @@
 
 <script setup>
 import Navbar from "@/components/navbar.vue";
+import SectionOne from "@/components/secion-one/index.vue";
 //
 </script>

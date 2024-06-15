@@ -22,6 +22,7 @@ a {
   font-size: 18px;
   line-height: 26px;
   color: white;
+  font-weight: 500;
 }
 .active-link {
   opacity: 30%;
