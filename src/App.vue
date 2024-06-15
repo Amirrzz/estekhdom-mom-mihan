@@ -5,6 +5,7 @@
       <SectionOne />
       <SectionTwo />
       <SectionThree />
+      <SectionFour />
     </v-main>
   </v-app>
 </template>
@@ -14,5 +15,6 @@ import Navbar from "@/components/navbar.vue";
 import SectionOne from "@/components/seciton-one/index.vue";
 import SectionTwo from "@/components/section-two/index.vue";
 import SectionThree from "@/components/section-three/index.vue";
+import SectionFour from "@/components/section-four/index.vue";
 //
 </script>
