@@ -1,5 +1,5 @@
 <template>
-  <section class="section-one">
+  <section class="section">
     <v-container class="fill-height">
       <v-responsive class="align-centerfill-height mx-auto">
         <v-row class="justify-center ga-6">
@@ -20,12 +20,15 @@ import Slider from "@/components/seciton-one/slider.vue";
 </script>
 
 <style scoped>
-.section-one {
+.section {
   background: linear-gradient(0deg, #2f189380, #2f189380),
     url("@/assets/section-one/section-one-background-image.jfif");
-  height: 100%;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
